@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: peachycloudsecurity-service
+  namespace: default
+  labels:
+    app: peachycloudsecurity-app
+spec:
+  selector:
+    app: peachycloudsecurity-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30090  #Any value
+  type: NodePort

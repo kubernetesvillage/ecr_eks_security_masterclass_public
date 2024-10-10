@@ -1,0 +1,86 @@
+---
+# Create the ServiceAccount
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: peachycloudsecurity-sa-cron
+  namespace: default
+
+---
+# Create the Role with permissions to manage deployments
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: deployment-manager
+rules:
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "list", "create", "delete", "update"]
+
+---
+# Bind the Role to the ServiceAccount using RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: deployment-manager-binding
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: peachycloudsecurity-sa-cron
+  namespace: default
+roleRef:
+  kind: Role
+  name: deployment-manager
+  apiGroup: rbac.authorization.k8s.io
+
+---
+# Create the CronJob
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: redeploy-peachycloudsecurity
+  namespace: default
+spec:
+  schedule: "*/1 * * * *"  # Every minute for testing
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      template:
+        spec:
+          serviceAccountName: peachycloudsecurity-sa-cron  # Use the correct ServiceAccount
+          containers:
+          - name: redeploy
+            image: bitnami/kubectl:latest
+            command:
+            - /bin/bash
+            - -c
+            - |
+              kubectl delete deployment peachycloudsecurity-deployment -n default || true
+              cat <<EOF | kubectl apply -f -
+              apiVersion: apps/v1
+              kind: Deployment
+              metadata:
+                name: peachycloudsecurity-deployment
+                namespace: default
+                labels:
+                  app: peachycloudsecurity-app
+              spec:
+                replicas: 1
+                selector:
+                  matchLabels:
+                    app: peachycloudsecurity-app
+                template:
+                  metadata:
+                    labels:
+                      app: peachycloudsecurity-app
+                  spec:
+                    serviceAccountName: peachycloudsecurity-sa
+                    containers:
+                    - name: peachycloudsecurity-app
+                      image: IMAGE_PLACEHOLDER
+                      imagePullPolicy: Always
+                      ports:
+                      - containerPort: 80
+              EOF
+          restartPolicy: OnFailure

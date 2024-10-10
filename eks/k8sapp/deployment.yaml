@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: peachycloudsecurity-deployment
+  namespace: default
+  labels:
+    app: peachycloudsecurity-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: peachycloudsecurity-app
+  template:
+    metadata:
+      labels:
+        app: peachycloudsecurity-app
+    spec:
+      serviceAccountName: peachycloudsecurity-sa
+      containers:
+      - name: peachycloudsecurity-app
+        image: IMAGE_PLACEHOLDER
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

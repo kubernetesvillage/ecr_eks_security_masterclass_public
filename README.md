@@ -27,7 +27,7 @@ This workshop is tailored for security professionals, cloud engineers, and DevOp
 - 💻 Laptop with Browser
   - Laptop with an updated browser (Administrative Privileges if required).
 
-## Documentation:
+## Setup & Walkthrough Documentation
 
 - [Deployment Documentation](https://ekssecurity.kubernetesvillage.com/)
 

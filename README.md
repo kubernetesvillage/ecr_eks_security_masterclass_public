@@ -68,7 +68,7 @@ This workshop is tailored for security professionals, cloud engineers, and DevOp
 - [ Attacking & Defending Kubernetes training](https://www.linkedin.com/in/peachycloudsecurity/)
 
 
-Note: Currently unable to provide the support in case facing any deployment issue. This lab is for educational purposes only. Do not attack or test any website or network without proper authorization. The trainers are not liable or responsible for any misuse and this course provided independently and is not endorsed by their employers or any other corporate entity.
+Note: Currently unable to provide the support in case facing any deployment issue. This lab is for educational purposes only. Do not attack or test any website or network without proper authorization. The trainers are not liable or responsible for any misuse and this course provided independently and is not endorsed by their employers or any other corporate entity. Refer to disclaimer section at [ekssecurity.kubernetesvillage.com](https://ekssecurity.kubernetesvillage.com/welcome/introduction#disclaimer)
 
 
 

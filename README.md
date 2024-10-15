@@ -2,17 +2,17 @@
 
 > Authored by Anjali Shukla & Divyanshu Shukla for [kubernetesvillage](https://www.linkedin.com/company/kubernetesvillage) community.
 
+
 ## Workshop Overview
 
 The AWS EKS Red Team Masterclass - From Exploitation to Defense is an immersive workshop designed to take participants through real-world scenarios of attacking and defending Kubernetes clusters hosted on AWS EKS.
 
-This workshop provides a comprehensive approach, from understanding the anatomy of attacks on EKS clusters to deploying robust defense mechanisms. Participants will learn how to exploit misconfigurations and vulnerabilities within AWS EKS, followed by the implementation of best security practices to safeguard the environment.
-Key Takeaways:
+This workshop provides a comprehensive approach, from understanding the anatomy of attacks on EKS clusters using AWS ECR to deploying robust defense mechanisms. Participants will learn how to backdoor AWS ECR image & exploit misconfigurations and vulnerabilities within AWS EKS, followed by the implementation of best security practices to safeguard the environment.
 
-- Hands-on labs focused on exploiting EKS misconfigurations.
-- Techniques for lateral movement, privilege escalation, and post-exploitation in AWS EKS.
-- Deep dive into securing AWS EKS clusters by leveraging IAM roles, Kubernetes RBAC, and network policies.
-- Best practices for automating vulnerability detection and defense mechanisms in AWS EKS environments.
+- Key Takeaways:
+  - Hands-on labs focused on exploiting EKS misconfigurations.
+  - Techniques for lateral movement, privilege escalation, and post-exploitation using AWS ECR in AWS EKS .
+  - Deep dive into securing AWS EKS clusters by leveraging IAM roles and AWS ECR.
 
 This workshop is tailored for security professionals, cloud engineers, and DevOps teams looking to enhance their understanding of offensive and defensive Kubernetes security strategies.
 
@@ -27,7 +27,9 @@ This workshop is tailored for security professionals, cloud engineers, and DevOp
 - 💻 Laptop with Browser
   - Laptop with an updated browser (Administrative Privileges if required).
 
+## Documentation:
 
+- [Deployment Documentation](https://ekssecurity.kubernetesvillage.com/)
 
 ## Credits
 
@@ -64,3 +66,9 @@ This workshop is tailored for security professionals, cloud engineers, and DevOp
 - [Datadog Security Labs - EKS Attacking & Securing Cloud Identities](https://securitylabs.datadoghq.com/articles/amazon-eks-attacking-securing-cloud-identities/)
 - [Cloud HackTricks Kubernetes Enumeration](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security/kubernetes-enumeration)
 - [ Attacking & Defending Kubernetes training](https://www.linkedin.com/in/peachycloudsecurity/)
+
+
+Note: Currently unable to provide the support in case facing any deployment issue. This lab is for educational purposes only. Do not attack or test any website or network without proper authorization. The trainers are not liable or responsible for any misuse and this course provided independently and is not endorsed by their employers or any other corporate entity.
+
+
+

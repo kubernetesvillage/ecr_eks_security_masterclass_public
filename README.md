@@ -67,6 +67,25 @@ This workshop is tailored for security professionals, cloud engineers, and DevOp
 - [Cloud HackTricks Kubernetes Enumeration](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security/kubernetes-enumeration)
 - [ Attacking & Defending Kubernetes training](https://www.linkedin.com/in/peachycloudsecurity/)
 
+## Disclaimer
+
+- The information, commands, and demonstrations presented in this course, **AWS EKS Red Team Masterclass - From Exploitation to Defense**, are intended strictly for educational purposes. Under no circumstances should they be used to compromise or attack any system outside the boundaries of this educational session unless explicit permission has been granted.
+
+    - <b>This course is provided by the instructors independently and is not endorsed by their employers or any other corporate entity. The content does not necessarily reflect the views or policies of any company or professional organization associated with the instructors.</b>
+
+- **Usage of Training Material**: The training material is provided without warranties or guarantees. Participants are responsible for applying the techniques or methods discussed during the training. The trainers and their respective employers or affiliated companies are not liable for any misuse or misapplication of the information provided.
+
+- **Liability**: The trainers, their employers, and any affiliated companies are not responsible for any direct, indirect, incidental, or consequential damages arising from the use of the information provided in this course. No responsibility is assumed for any injury or damage to persons, property, or systems as a result of using or operating any methods, products, instructions, or ideas discussed during the training.
+
+- **Intellectual Property**: This course and all accompanying materials, including slides, worksheets, and documentation, are the intellectual property of the trainers. They are shared under the Apache License 2.0, which requires that appropriate credit be given to the trainers whenever the materials are used, modified, or redistributed.
+
+- **References**: Some of the labs referenced in this workshop are based on open-source materials available at [Amazon EKS Security Immersion Day](https://github.com/aws-samples/amazon-eks-security-immersion-day) GitHub repository, licensed under the MIT License. Additionally, modifications and fixes have been applied using AI tools such as Amazon Q, ChatGPT, and Gemini.
+
+- **Educational Purpose**: This lab is for educational purposes only. Do not attack or test any website or network without proper authorization. The trainers are not liable or responsible for any misuse.
+- **Usage Rights**: Individuals are permitted to use this course for instructional purposes, provided that no fees are charged to the students.
+
+
+
 
 > Note: Currently unable to provide the support in case facing any deployment issue. This lab is for educational purposes only. Do not attack or test any website or network without proper authorization. The trainers are not liable or responsible for any misuse and this course provided independently and is not endorsed by their employers or any other corporate entity. Refer to disclaimer section at [ekssecurity.kubernetesvillage.com](https://ekssecurity.kubernetesvillage.com/welcome/introduction#disclaimer)
 

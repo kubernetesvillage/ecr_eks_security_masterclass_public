@@ -1,11 +1,16 @@
-# ⚠️ AWS ECR & EKS Security Masterclass - From Exploitation to Defense ⚠️
+# ⚠️ EKS Goat: AWS ECR & EKS Security Masterclass ⚠️
+
+<p align="center">
+  <img src="/external-images/logoo.png" alt="Logo" width="500"/>
+</p>
+
 
 > Authored by Anjali Shukla & Divyanshu Shukla for [kubernetesvillage](https://www.linkedin.com/company/kubernetesvillage) community.
 
 
 ## Workshop Overview
 
-The AWS EKS Red Team Masterclass - From Exploitation to Defense is an immersive workshop designed to take participants through real-world scenarios of attacking and defending Kubernetes clusters hosted on AWS EKS.
+The EKS Goat: AWS ECR & EKS Security Masterclass - From Exploitation to Defense is an immersive workshop designed to take participants through real-world scenarios of attacking and defending Kubernetes clusters hosted on AWS EKS.
 
 This workshop provides a comprehensive approach, from understanding the anatomy of attacks on EKS clusters using AWS ECR to deploying robust defense mechanisms. Participants will learn how to backdoor AWS ECR image & exploit misconfigurations and vulnerabilities within AWS EKS, followed by the implementation of best security practices to safeguard the environment.
 

@@ -1,7 +1,7 @@
 # ⚠️ EKS Goat: AWS ECR & EKS Security Masterclass ⚠️
 
 <p align="center">
-  <img src="/external-images/logoo.png" alt="Logo" width="500"/>
+  <img src="/external-images/logo-1.png" alt="Logo" width="500"/>
 </p>
 
 

@@ -7,6 +7,7 @@
 
 > Authored by Anjali Shukla & Divyanshu Shukla for [kubernetesvillage](https://www.linkedin.com/company/kubernetesvillage) community.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fcb91e86-34bf-4621-a1ad-40789fdae187/deploy-status)](https://app.netlify.com/sites/ekssecurity/deploys)
 
 ## Workshop Overview
 

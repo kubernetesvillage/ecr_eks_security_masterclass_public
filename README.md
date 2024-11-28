@@ -4,6 +4,14 @@
   <img src="/external-images/logo-1.png" alt="Logo" width="500"/>
 </p>
 
+### Workshop Website
+Access the EKS Security workshop content here:  
+[https://ekssecurity.kubernetesvillage.com](https://ekssecurity.kubernetesvillage.com)
+
+### Alternate Link
+In case of accessibility issues, you can use the following link:  
+[https://ekssecurity.netlify.app/](https://ekssecurity.netlify.app)
+
 
 > Authored by Anjali Shukla & Divyanshu Shukla for [kubernetesvillage](https://www.linkedin.com/company/kubernetesvillage) community.
 

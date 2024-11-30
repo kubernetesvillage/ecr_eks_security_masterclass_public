@@ -438,7 +438,7 @@ sleep 5  # Increased sleep for consistency
 
 echo "Associating instance profile peachycloudsecurity-ip for the Instance:$INSTANCE_ID..."
 echo "Running command: aws ec2 associate-iam-instance-profile --instance-id ${INSTANCE_ID} --iam-instance-profile Name=peachycloudsecurity-ip"
-aws ec2 associate-iam-instance-profile --instance-id $INSTANCE_ID --iam-instance-profile Name=peachycloudsecurity-ip --region ${REGION}if [ $? -eq 0 ]; then
+aws ec2 associate-iam-instance-profile --instance-id $INSTANCE_ID --iam-instance-profile Name=peachycloudsecurity-ip --region ${REGION} if [ $? -eq 0 ]; then
     echo "Successfully associated instance profile."
 else
     echo "Failed to associate instance profile." >&2
@@ -460,9 +460,9 @@ fi
 echo "Create bucket for flag.txt..."
 export RANDOM_FLAG=${REPO_SUFFIX}
     export BUCKET_NAME="peachycloudsecurity-${RANDOM_FLAG}"
-    aws s3 mb s3://${BUCKET_NAME} && echo "peachycloudsecurity_flag_${RANDOM_FLAG}${RANDOM_FLAG}" > flag.txt 
+    aws s3 mb s3://${BUCKET_NAME} --region ${REGION} && echo "peachycloudsecurity_flag_${RANDOM_FLAG}${RANDOM_FLAG}" > flag.txt 
 if [ $? -eq 0 ]; then
-    aws s3 cp flag.txt s3://${BUCKET_NAME}/flag.txt
+    aws s3 cp flag.txt s3://${BUCKET_NAME}/flag.txt --region ${REGION}
 else
     echo "Failed to copy flag to bucket." >&2
 fi

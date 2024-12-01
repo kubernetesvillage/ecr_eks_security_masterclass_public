@@ -437,12 +437,15 @@ aws iam add-role-to-instance-profile --instance-profile-name peachycloudsecurity
 sleep 5  # Increased sleep for consistency
 
 echo "Associating instance profile peachycloudsecurity-ip for the Instance:$INSTANCE_ID..."
-echo "Running command: aws ec2 associate-iam-instance-profile --instance-id ${INSTANCE_ID} --iam-instance-profile Name=peachycloudsecurity-ip"
-aws ec2 associate-iam-instance-profile --instance-id $INSTANCE_ID --iam-instance-profile Name=peachycloudsecurity-ip --region ${REGION} if [ $? -eq 0 ]; then
+echo "Running command: aws ec2 associate-iam-instance-profile --instance-id ${INSTANCE_ID} --iam-instance-profile Name=peachycloudsecurity-ip --region ${REGION}"
+
+aws ec2 associate-iam-instance-profile --instance-id $INSTANCE_ID --iam-instance-profile Name=peachycloudsecurity-ip --region ${REGION}
+if [ $? -eq 0 ]; then
     echo "Successfully associated instance profile."
 else
     echo "Failed to associate instance profile." >&2
 fi
+
 
 echo "Detaching EKS role policy..."
 aws iam detach-role-policy --role-name ${EKS_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy

@@ -6,6 +6,8 @@ echo ""
 echo "Note: Only the regions us-east-1 and us-west-2 are supported."
 echo ""
 
+# Disable AWS CLI pager for non-interactive mode
+export AWS_PAGER=""
 
 # Prompt the user to confirm if they want to continue
 read -p "Do you want to continue with the deployment? (Y/N): " confirm
